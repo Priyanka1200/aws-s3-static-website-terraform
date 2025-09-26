@@ -1,3 +1,17 @@
+resource "aws_s3_object" "style" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "style.css"
+  source       = "${path.module}/style.css"
+  content_type = "text/css"
+}
+resource "aws_s3_bucket_public_access_block" "website_public_access" {
+  bucket = aws_s3_bucket.website.id
+
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
+}
 provider "aws" {
   region = "us-east-1"
 }
