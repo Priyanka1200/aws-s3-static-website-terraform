@@ -3,6 +3,7 @@
 This project uses Terraform to provision an AWS S3 bucket for static website hosting, including logging, versioning, and public access configuration.
 
 ## Features
+
 - Publicly accessible S3 bucket for static website hosting
 - Versioning enabled for the website bucket
 - Logging enabled, with logs stored in a separate S3 bucket
@@ -12,10 +13,12 @@ This project uses Terraform to provision an AWS S3 bucket for static website hos
 - Outputs the website endpoint URL after deployment
 
 ## Files
+
 - `main.tf`: Terraform configuration for AWS provider, S3 buckets, policies, and website settings
 - `index.html`: Basic welcome page for the static website
 
 ## Usage
+
 1. Install [Terraform](https://www.terraform.io/downloads.html) and configure your AWS credentials.
 2. Navigate to the `terraform` directory:
    ```pwsh
@@ -37,8 +40,16 @@ This project uses Terraform to provision an AWS S3 bucket for static website hos
 6. Visit the endpoint in your browser to view your static website.
 
 ## Notes
+
 - Make sure your AWS account allows public bucket policies and does not block public access for the website bucket.
 - To update the website, modify `index.html` and re-run `terraform apply`.
 
+# My Project
+
+This is a sample project.
+
+![Website Screenshot](screenshot.png)
+
 ## License
+
 MIT
